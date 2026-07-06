@@ -1,0 +1,266 @@
+name: Create YTPlusM iPA [Altered-Patch]
+
+on:
+  workflow_dispatch:
+    inputs:
+      enable_youpip:
+        description: "Integrate YouPiP"
+        type: boolean
+        required: true
+        default: false
+
+      enable_ytuhd:
+        description: "Integrate YTUHD"
+        type: boolean
+        required: true
+        default: false
+
+      enable_yq:
+        description: "Integrate YouQuality"
+        type: boolean
+        required: true
+        default: false
+
+      enable_youmute:
+       description: "Integrate YouMute"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ytlocalqueue:
+       description: "Integrate YTLocalQueue"
+       type: boolean
+       required: true
+       default: false
+
+      enable_youtimestamp:
+       description: "Integrate YouTimeStamp"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ryd:
+        description: "Integrate Return YouTube Dislikes"
+        type: boolean
+        required: true
+        default: false
+
+      enable_ytabc:
+        description: "Integrate YTABConfig"
+        type: boolean
+        required: true
+        default: false
+
+      enable_demc:
+        description: "Integrate DontEatMyContent"
+        type: boolean
+        required: true
+        default: false
+
+      enable_ytweaks:
+        description: "Integrate YTweaks (YTPlusM)"
+        type: boolean
+        required: true
+        default: false
+        
+      enable_gonerino:
+        description: "Integrate Gonerino (YTPlusM)"
+        type: boolean
+        required: true
+        default: false
+
+      enable_youspeed:
+       description: "Integrate YouSpeed (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ytlcm:
+       description: "Integrate YTLowContrastMode (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_VolumeBoostYT:
+       description: "Integrate VolumeBoostYT (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_YouGetCaption:
+       description: "Integrate YouGetCaption (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ytpf:
+       description: "NEW! Integrate YTPlaybackFix (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      ipa_url:
+        description: "URL to the decrypted IPA file"
+        default: ""
+        required: true
+        type: string
+
+      tweak_version:
+        description: "The version of the tweak to use. Versions that you can use are from 5.1 to 5.2.1 (no 5.2)"
+        default: "5.2.1"
+        required: true
+        type: string
+
+      display_name:
+        description: "App Name (Optional)"
+        default: "YouTube"
+        required: true
+        type: string
+
+      bundle_id:
+        description: "BundleID (Optional)"
+        default: "com.google.ios.youtube"
+        required: true
+        type: string
+
+      info_note:
+        description: "TIP: Learn more about integrations in the README via the link below"
+        default: "https://github.com/Mark02-2012/YTPlusM#tweak-integration-details"
+        type: string
+        required: false
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-tweaks:
+    uses: ./.github/workflows/_build_tweaks_patched.yml
+    with:
+      enable_youpip: ${{ inputs.enable_youpip }}
+      enable_ytuhd: ${{ inputs.enable_ytuhd }}
+      enable_yq: ${{ inputs.enable_yq }}
+      enable_ryd: ${{ inputs.enable_ryd }}
+      enable_ytabc: ${{ inputs.enable_ytabc }}
+      enable_demc: ${{ inputs.enable_demc }}
+      enable_ytweaks: ${{ inputs.enable_ytweaks }}
+      enable_gonerino: ${{ inputs.enable_gonerino }}
+      enable_youspeed: ${{ inputs.enable_youspeed }}
+      enable_youmute: ${{ inputs.enable_youmute }}
+      enable_ytlocalqueue: ${{ inputs.enable_ytlocalqueue }}
+      enable_youtimestamp: ${{ inputs.enable_youtimestamp }}
+      enable_ytlcm: ${{ inputs.enable_ytlcm }}
+      enable_VolumeBoostYT: ${{ inputs.enable_VolumeBoostYT }}
+      enable_YouGetCaption: ${{ inputs.enable_YouGetCaption }}
+      enable_ytpf: ${{ inputs.enable_ytpf }}
+      tweak_version: ${{ inputs.tweak_version }}
+
+
+  package:
+    name: Package IPA
+    runs-on: macos-latest
+    needs: build-tweaks
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Releases_builder 
+        uses: actions/checkout@v6.0.2       
+        with:
+          repository: Mark02-2012/YTPlusM
+          ref: Releases_builder 
+          
+      - name: Download built debs
+        uses: actions/download-artifact@v8
+        with:
+          name: built-debs
+          path: ${{ github.workspace }}
+
+      - name: Hide sensitive inputs
+        uses: levibostian/action-hide-sensitive-inputs@v1
+        with:
+          exclude_inputs: bundle_id,display_name,enable_demc,enable_ryd,enable_ytabc,enable_youpip,enable_yq,enable_ytuhd,enable_ytweaks,enable_gonerino,enable_youspeed,enable_ytlcm,enable_VolumeBoostYT,enable_YouGetCaption,info_note,tweak_version
+          
+
+      - name: Download and validate IPA
+        run: |
+          wget "${{ inputs.ipa_url }}" --no-verbose -O youtube.ipa
+          file_type=$(file --mime-type -b youtube.ipa)
+          if [[ "$file_type" != "application/x-ios-app" && "$file_type" != "application/zip" ]]; then
+            echo "::error::Validation failed: The downloaded file is not a valid IPA. Detected type: $file_type."
+            exit 1
+          fi
+
+      - name: Get YouTube Version 
+        run: |
+          unzip -q youtube.ipa -d ytextracted
+          echo "YT_VERSION=$(grep -A 1 '<key>CFBundleVersion</key>' ytextracted/Payload/YouTube.app/Info.plist | grep '<string>' | awk -F'[><]' '{print $3}')" >> $GITHUB_ENV
+
+      - name: Determines the Release Title Prefix
+        run: |
+          if [ "${{ inputs.enable_ytweaks }}" = "false" ] && \
+             [ "${{ inputs.enable_gonerino }}" = "false" ] && \
+             [ "${{ inputs.enable_youspeed }}" = "false" ] && \
+             [ "${{ inputs.enable_ytlcm }}" = "false" ] && \
+             [ "${{ inputs.enable_VolumeBoostYT }}" = "false" ] && \
+             [ "${{ inputs.enable_YouGetCaption }}" = "false" ]; then
+            
+            echo "RELEASE_PREFIX=AlteredYTPlus" >> $GITHUB_ENV
+          else
+            echo "RELEASE_PREFIX=AlteredYTPlusM" >> $GITHUB_ENV
+          fi
+
+      - name: Install cyan
+        run: pipx install --force https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
+
+      - name: Inject tweaks into IPA
+        run: |
+          tweaks="ytplus.deb OpenYoutubeSafariExtension.appex"
+          for f in *.deb; do
+            [ -f "$f" ] && tweaks="$tweaks $f"
+          done
+          cyan -i youtube.ipa -o ${{ env.RELEASE_PREFIX }}_${{ env.YT_VERSION }}_${{ inputs.tweak_version }}.ipa -uwef $tweaks -n "${{ inputs.display_name }}" -b ${{ inputs.bundle_id }}
+  
+      - name: Prepare Releases Notes
+        run: |
+          sed "s/%yt_version%/${{ env.YT_VERSION }}/g; s/%ytlite_version%/${{ inputs.tweak_version }}/g; s/%release_prefix%/${{ env.RELEASE_PREFIX }}/g" \
+          .github/RELEASE_TEMPLATE/Release_Notes.md > release_notes_prepared.md
+
+      - name: Prepare Releases Notes For iOS 15
+        run: |
+          if [ "${{ env.YT_VERSION }}" = "20.21.6" ]; then
+          
+          sed "s/%yt_version%/${{ env.YT_VERSION }}/g; s/%ytlite_version%/${{ inputs.tweak_version }}/g; s/%release_prefix%/${{ env.RELEASE_PREFIX }}/g" \
+          .github/RELEASE_TEMPLATE/Release_Notes_YT20.21.6.md > release_notes_prepared_ios_15.md
+          fi
+          
+      - name: Choose Releases Notes
+        run: |
+          if [ "${{ env.YT_VERSION }}" = "20.21.6" ]; then
+
+           echo "NOTES_SELECTED=release_notes_prepared_ios_15.md" >> $GITHUB_ENV
+          else
+           echo "NOTES_SELECTED=release_notes_prepared.md" >> $GITHUB_ENV
+          fi
+
+      - name: Define compatibility app in release title
+        run: |
+          if [ "${{ env.YT_VERSION }}" = "20.21.6" ]; then
+
+           echo "FOR_IOS15=(IOS 15+)" >> $GITHUB_ENV
+          else 
+           echo "FOR_IOS15=" >> $GITHUB_ENV
+          fi
+
+      - name: Upload to GitHub Releases
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ inputs.tweak_version }}_${{ env.YT_VERSION }}(${{ github.run_number }})
+          name: ${{ env.RELEASE_PREFIX }} ${{ inputs.tweak_version }} and ${{ env.YT_VERSION }} ${{ env.FOR_IOS15 }}
+          files: ${{ env.RELEASE_PREFIX }}_${{ env.YT_VERSION }}_${{ inputs.tweak_version }}.ipa
+          draft: true
+          body_path: ${{ env.NOTES_SELECTED }}
+
+      - name: Output Release URL
+        run: |
+          echo "::notice::🚀Build completed! Release available at: https://github.com/${{ github.repository }}/releases"
