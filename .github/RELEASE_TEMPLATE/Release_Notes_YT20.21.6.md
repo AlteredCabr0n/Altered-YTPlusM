@@ -5,4 +5,4 @@
 ## Must read:
 - Releases named **YTPlus** are releases with only YouPiP, YTUHD, YouQuality, RYD, YTABConfig and DontEatMyContent.
 - Releases named **YTPlusM** have got YouPiP, YTUHD, YouQuality, RYD, YTABConfig and DontEatMyContent **but also the extra YTPlusM tweaks** 
-(YTweaks, Gonerino, YouSpeed, YTLowContrastMode, VolumeBoostYT, YouGetCaption, my tweak YTPlaybackFix, YouChooseQuality, YouShareandPleaseDontStopTheMusic)
+(YTweaks, Gonerino, YouSpeed, YTLowContrastMode, VolumeBoostYT, YouGetCaption, my tweak YTPlaybackFix, YouChooseQuality, YouShare and PleaseDontStopTheMusic)
