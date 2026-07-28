@@ -325,10 +325,10 @@ Updated YouTube Plus from 5.2.1 to 5.2.2; cracked by <a href="https://www.reddit
 This project is alive also thanks to those fantastic guys:
 
 
-<a href="https://github.com/dayanch96">Dayanch96</a>: **creator of YTPlus**
+<a href="https://github.com/dayanch96">Dayanch96</a>: **creator of YTPlus/YTLite**
 
 
-<a href="https://www.reddit.com/u/shinewake/s/ZeFbBOkUAa">shinewake</a>: **patcher of YTPlus 5.2.1 (he removed Patreon DRM)**
+<a href="https://www.reddit.com/u/shinewake/s/ZeFbBOkUAa">shinewake</a>: **patcher of YTPlus/YTLite (he removed Patreon DRM)**
 
 
 <a href="https://github.com/fosterbarnes">fosterbarnes</a>: **creator of YTweaks**
@@ -344,5 +344,6 @@ This project is alive also thanks to those fantastic guys:
 
 
 <a href="https://github.com/VasirakCalgux">VasirakCalgux</a>: **creator of VolumeBoostYT**
+
 
 <a href="https://github.com/mikey820">mikey820</a>: **creator of PleaseDontStopTheMusic**
