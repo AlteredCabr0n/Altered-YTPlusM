@@ -12,8 +12,18 @@
   This project is an independent developer modification and is not affiliated with, authorized, maintained, sponsored, or endorsed by Google LLC or YouTube. All product and company names are trademarks of their respective holders.
 </p>
 
-<strong>Fork this repo to build yourself YTPlus and YTPlusM IPAs (with YouTube Plus from 5.1 to 5.2.2, no 5.2) without DRM Patreon subscription or <a href="https://t.me/Mark02workshop_official">join my telegram channel</a> for updates, communications and pre-built releases.
-Don't know how to build YTPlus or YTPlusM? Read [How to build YouTube Plus and YTPlusM app using GitHub Actions](#how-to-build-youtube-plus-and-ytplusm-app-using-github-actions) and [What Means YTPlusM and YTPlusM DIY](#what-means-ytplusm-and-ytplusm-diy)</strong>
+<p align="center">
+   <strong>Info</strong>
+</p>
+
+<p align="center">
+   <strong>Fork this repo to build yourself YTPlus and YTPlusM IPAs (with YouTube Plus from 5.1 to 5.2.2, no 5.2) without DRM Patreon subscription or <a href="https://t.me/Mark02workshop_official">join my telegram channel</a> for updates, communications and pre-built      releases.</strong>
+</p>
+
+<p align="center">
+   <strong>Don't know how to build YTPlus or YTPlusM?</strong> Read <a href="#how-to-build-youtube-plus-and-ytplusm-app-using-github-actions">How to build YouTube Plus and YTPlusM app using GitHub Actions</a> and <a href="#what-means-ytplusm-and-ytplusm-diy">What Means    YTPlusM and YTPlusM DIY.
+   </a>
+</p>
 
 
 # MUST READ
