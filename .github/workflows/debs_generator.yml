@@ -1,0 +1,139 @@
+name: Generate deb files
+
+on:
+  workflow_dispatch:
+    inputs:
+      enable_youpip:
+        description: "Generate YouPiP"
+        type: boolean
+        required: true
+        default: false
+
+      enable_ytuhd:
+        description: "Generate YTUHD"
+        type: boolean
+        required: true
+        default: false
+
+      enable_yq:
+        description: "Generate YouQuality"
+        type: boolean
+        required: true
+        default: false
+
+      enable_ryd:
+        description: "Generate Return YouTube Dislikes"
+        type: boolean
+        required: true
+        default: false
+
+      enable_ytabc:
+        description: "Generate YTABConfig"
+        type: boolean
+        required: true
+        default: false
+
+      enable_demc:
+        description: "Generate DontEatMyContent"
+        type: boolean
+        required: true
+        default: false
+
+      enable_ytweaks:
+        description: "Generate YTweaks (YTPlusM)"
+        type: boolean
+        required: true
+        default: false
+        
+      enable_gonerino:
+        description: "Generate Gonerino (YTPlusM)"
+        type: boolean
+        required: true
+        default: false
+
+      enable_youspeed:
+       description: "Generate YouSpeed (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ytlcm:
+       description: "Generate YTLowContrastMode (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_VolumeBoostYT:
+       description: "Generate VolumeBoostYT (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_YouGetCaption:
+       description: "Generate YouGetCaption (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ytpf:
+       description: "Generate YTPlaybackFix, my tweak! (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ytpfBETA:
+       description: "Generate my YTPlaybackFix but latest beta version, at your own risk... (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ycq:
+       description: "Generate YouChooseQuality (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_ys:
+       description: "Generate YouShare (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_pdstm:
+       description: "Generate PleaseDontStopTheMusic (YTPlusM)"
+       type: boolean
+       required: true
+       default: false
+
+      tweak_version:
+        description: "The version of YTPlus/YTLite to generate. Versions that you can generate are from 5.1 to 5.2.2 (no 5.2; all without subscription required)"
+        default: "5.2.2"
+        required: true
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true     
+
+jobs:
+  build-tweaks:
+    uses: ./.github/workflows/_build_tweaks.yml
+    with:
+      enable_youpip: ${{ inputs.enable_youpip }}
+      enable_ytuhd: ${{ inputs.enable_ytuhd }}
+      enable_yq: ${{ inputs.enable_yq }}
+      enable_ryd: ${{ inputs.enable_ryd }}
+      enable_ytabc: ${{ inputs.enable_ytabc }}
+      enable_demc: ${{ inputs.enable_demc }}
+      enable_ytweaks: ${{ inputs.enable_ytweaks }}
+      enable_gonerino: ${{ inputs.enable_gonerino }}
+      enable_youspeed: ${{ inputs.enable_youspeed }}
+      enable_ytlcm: ${{ inputs.enable_ytlcm }}
+      enable_VolumeBoostYT: ${{ inputs.enable_VolumeBoostYT }}
+      enable_YouGetCaption: ${{ inputs.enable_YouGetCaption }}
+      enable_ytpf: ${{ inputs.enable_ytpf }}
+      enable_ytpfBETA: ${{ inputs.enable_ytpfBETA }}
+      enable_ycq: ${{ inputs.enable_ycq }}
+      enable_ys: ${{ inputs.enable_ys }}
+      enable_pdstm: ${{ inputs.enable_pdstm }}
+      tweak_version: ${{ inputs.tweak_version }}
