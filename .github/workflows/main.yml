@@ -171,7 +171,7 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout Releases_builder 
+      - name: Checkout main branch
         uses: actions/checkout@v6.0.2       
         with:
           repository: Mark02-2012/YTPlusM
