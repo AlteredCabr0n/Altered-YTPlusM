@@ -13,18 +13,22 @@
 </p>
 
 <p align="center">
-   <strong>Info</strong>
+   <strong>More info</strong>
 </p>
 
 <p align="center">
-   <strong>Fork this repo to build yourself YTPlus and YTPlusM IPAs (with YouTube Plus from 5.1 to 5.2.2, no 5.2) without DRM Patreon subscription or <a href="https://t.me/Mark02workshop_official">join my telegram channel</a> for updates, communications and pre-built      releases.</strong>
+   Fork this repo to build yourself YTPlus and YTPlusM IPAs (with YouTube Plus from 5.1 to 5.2.2, no 5.2) without DRM Patreon subscription or <a href="https://t.me/Mark02workshop_official">join my telegram channel</a> for updates, communications and pre-built releases.
 </p>
 
 <p align="center">
-   <strong>Don't know how to build YTPlus or YTPlusM?</strong> Read <a href="#how-to-build-youtube-plus-and-ytplusm-app-using-github-actions">How to build YouTube Plus and YTPlusM app using GitHub Actions</a> and <a href="#what-means-ytplusm-and-ytplusm-diy">What Means    YTPlusM and YTPlusM DIY.
+   <strong>Don't know how to build YTPlus or YTPlusM?</strong> Read <a href="#how-to-build-youtube-plus-and-ytplusm-app-using-github-actions">How to build YouTube Plus and YTPlusM app using GitHub Actions</a>.
    </a>
 </p>
 
+<p align="center">
+   <strong>Want more info about my YTPlusM?</strong> Read <a href="#what-means-ytplusm-and-ytplusm-diy">What Means YTPlusM and YTPlusM DIY.
+   </a>
+</p>
 
 # MUST READ
 **1. From June 1 2026 you do not need anymore [YTPlusM DIY](https://github.com/Mark02-2012/YTPlusM-DIY), but simply fork this repository (main branch). [YTPlusM DIY](https://github.com/Mark02-2012/YTPlusM-DIY) will not be updated anymore**
