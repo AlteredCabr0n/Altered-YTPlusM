@@ -161,7 +161,7 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
 ## What Means YTPlusM and YTPlusM DIY
 <details>
  <summary><strong>YTPlusM</strong></summary>
-<p><strong>YTPlusM</strong> is a fork of <a href="https://github.com/dayanch96/YTLite">YTPlus</a> but with <strong>ten more tweaks integrated</strong> (<a href="https://github.com/fosterbarnes/YTweaks">YTweaks</a>, <a href="https://github.com/castdrian/Gonerino">Gonerino</a>, <a href="https://github.com/PoomSmart/YouSpeed">YouSpeed</a>, <a href="https://github.com/arichornlover/YTLowContrastMode">YTLowContrastMode</a>, <a href="https://github.com/VasirakCalgux/VolumeBoostYT">VolumeBoostYT</a>, <a href="https://github.com/PoomSmart/YouGetCaption">YouGetCaption</a>, my tweak <a href="https://github.com/Mark02-2012/YTPlaybackFix">YTPlaybackFix</a>, <a href="https://github.com/PoomSmart/YouChooseQuality">YouChooseQuality</a>, <a href="https://github.com/Tonwalter888/YouShare">YouShare</a> and <a href="https://github.com/mikey820/PleaseDontStopTheMusic">PleaseDontStopTheMusic</a>). <strong>YTPlus releases will not have those extra tweaks, but only YTLite and YouPiP, YTUHD, Return-YouTube-Dislikes, YouQuality, DontEatMyContent and YTABConfig.</strong></p>
+<p><strong>YTPlusM</strong> is my fork of <a href="https://github.com/dayanch96/YTLite">YTPlus/YTLite</a> that has <strong>ten more tweaks integrated</strong> (<a href="https://github.com/fosterbarnes/YTweaks">YTweaks</a>, <a href="https://github.com/castdrian/Gonerino">Gonerino</a>, <a href="https://github.com/PoomSmart/YouSpeed">YouSpeed</a>, <a href="https://github.com/arichornlover/YTLowContrastMode">YTLowContrastMode</a>, <a href="https://github.com/VasirakCalgux/VolumeBoostYT">VolumeBoostYT</a>, <a href="https://github.com/PoomSmart/YouGetCaption">YouGetCaption</a>, my tweak <a href="https://github.com/Mark02-2012/YTPlaybackFix">YTPlaybackFix</a>, <a href="https://github.com/PoomSmart/YouChooseQuality">YouChooseQuality</a>, <a href="https://github.com/Tonwalter888/YouShare">YouShare</a> and <a href="https://github.com/mikey820/PleaseDontStopTheMusic">PleaseDontStopTheMusic</a>) + YTPlus/YTLite without subscription required. <strong>YTPlus releases will not have those extra tweaks, but only YTPlus/YTLite YouPiP, YTUHD, Return-YouTube-Dislikes, YouQuality, DontEatMyContent and YTABConfig.</strong></p>
 </details>
 
 
@@ -192,7 +192,7 @@ Updated YouTube Plus from 5.2.1 to 5.2.2; cracked by <a href="https://www.reddit
    <li><strong>YouTube Plus:</strong> <em>5.2 beta 4</em></li>
 </ul>  
 
-<strong>⚠️YTPlus 5.2b4 doesn't work with the latest versions of yt (from 21.14.4 and above), so use YTPlus from 5.2.1 to build YTPlusM with newest yt versions⚠️</strong>
+<strong>⚠️YTPlus 5.2b4 doesn't work with the latest versions of yt (from 21.14.4 and above), so use YTPlus 5.2.1 or above to build YTPlusM with newest yt versions⚠️</strong>
 
 <ul>
    <li><strong>Latest confirmed:</strong> <em>21.28.3</em></li>
@@ -204,8 +204,8 @@ Updated YouTube Plus from 5.2.1 to 5.2.2; cracked by <a href="https://www.reddit
 ## Supported YouTube Version For iOS 15
 <ul>
    <li><strong>Latest confirmed:</strong> <em>20.21.6</em></li>
-   <li><strong>Date tested:</strong> <em>Apr 12 2026</em></li>
-   <li><strong>YouTube Plus:</strong> <em>5.2.1</em></li>
+   <li><strong>Date tested:</strong> <em>July 24, 2026</em></li>
+   <li><strong>YouTube Plus:</strong> <em>5.2.2</em></li>
 
 ## Tweak Integration Details
 <details>
