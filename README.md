@@ -1,6 +1,6 @@
 # YTPlusM
 <p align="center">
-  <img src="Resources/YTPlusM.png" width="450"><br>
+  <img src="Resources/YTPlusM.png" width="435"><br>
   The best fork of an incredible enhancer for the popular video app on iOS, featuring over a hundred customizable options but with the latest version freed and with more tweaks than the original <a href="https://github.com/dayanch96/YTLite">YTPlus.</a>
 </p>
 
