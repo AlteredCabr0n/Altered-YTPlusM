@@ -1,7 +1,7 @@
 <h1 align="center">YTPlusM</h1>
 <p align="center">
   <img src="Resources/YTPlusM.png" width="435"><br>
-  The best fork of an incredible enhancer for the popular video app on iOS, featuring over a hundred customizable options but with the latest version freed and with more tweaks than the original <a href="https://github.com/dayanch96/YTLite">YTPlus.</a>
+  The best fork of <a href="https://github.com/dayanch96/YTLite">YTLite</a>, the incredible enhancer for the YouTube app on iOS. Features over 100 customizable options, updated to the latest version without any subscription, and packed with even more tweaks than the original.
 </p>
 
 <h3 align="center">
@@ -17,7 +17,7 @@
 </h3>
 
 <p align="center">
-   Fork this repo to build yourself YTPlus and YTPlusM IPAs (with YouTube Plus from 5.1 to 5.2.2, no 5.2) without DRM Patreon subscription or <a href="https://t.me/Mark02workshop_official">join my telegram channel</a> for updates, communications and pre-built releases.
+   Fork this repo to build yourself YTPlus and YTPlusM IPAs (with <a href="https://github.com/dayanch96/YTLite">YTPlus/YTLite.</a> from 5.1 to 5.2.2, no 5.2) without DRM Patreon subscription or <a href="https://t.me/Mark02workshop_official">join my telegram channel</a> for updates, communications and pre-built releases.
 </p>
 
 <p align="center">
