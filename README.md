@@ -30,7 +30,7 @@
    </a>
 </p>
 
-# MUST READ
+<h1 align="center">MUST READ</h1>
 **1. From June 1 2026 you do not need anymore [YTPlusM DIY](https://github.com/Mark02-2012/YTPlusM-DIY), but simply fork this repository (main branch). [YTPlusM DIY](https://github.com/Mark02-2012/YTPlusM-DIY) will not be updated anymore**
 
 **2. I removed download table and all releases' files due to legal reason;**
