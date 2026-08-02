@@ -106,21 +106,21 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
 > [!NOTE]
 > If this your first time, complete following steps before starting:
 >
-> 1. Fork this repository using the fork button on the top right
+> 1. [Fork this repository](https://github.com/Mark02-2012/YTPlusM/fork) using the fork button on the top right
 > 2. On your forked repository, go to **Repository Settings** > **Actions**, enable **Read and Write** permissions.
 
 <details>
   <summary>How to build YTPlus and YTPlusM app</summary>
   <ol>
-    <li>Click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
+    <li>If you already have a fork of MY repository, click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
     <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>Create YouTube Plus or YTPlusM app</strong>.</li>
     <li>Click the <strong>Run workflow</strong> button located on the right side.</li>
     <li>Mark or unmark the tweaks you want to integrate. Learn more about them in the <a href="#tweak-integration-details">Tweak Integration Details</a> section.</li>
     <li>Prepare a decrypted .ipa file <em>(if you don't know where to find it read <a href="#how-to-find-decrypted-youtube-ipas">this</a>)</em>, then upload it to a file provider (e.g., filebin.net, filemail.com, Dropbox or catbox.moe are recommended). Paste the URL of the decrypted IPA file in the provided field.</li>
-    <li><strong>NOTE:</strong> Make sure to provide a direct download link to the file, not a link to a webpage. Otherwise, the process will fail.</li>
-    <li>Enter the YTLite version (starting from 5.1 to 5.2.2 crack, no 5.2; the latest is selected by default). You can also change the BundleID and Display Name if desired.</li>
+    <li><strong>NOTE:</strong> Make sure to provide a direct download link to the file, not a link to a webpage. Otherwise, the process will fail <strong>(IF YOU USED DROPBOX, YOU HAVE TO CHANGE THE FINAL PART OF THE LINK FROM dl=0 TO dl=1).</strong></li>
+    <li>Enter the YTPlus/Lite version (starting from 5.1 to 5.2.2 cracked, no 5.2; <strong>the latest is selected by default</strong>). You can also change the BundleID and Display Name if desired.</li>
     <li>Make sure all inputs are correct, then click <strong>Run workflow</strong> to start the process.</li>
-    <li>Wait for the build to finish. You can download the YouTube Plus app from the releases section of your forked repo. (If you can't find the releases section, go to your forked repo and add /releases to the URL, i.e., github.com/user/YTLite/releases.)</li>
+    <li>Wait for the build to finish. You can download the IPA app from the releases section of your forked repo. (If you can't find the releases section, go to your forked repo and add /releases to the URL, i.e., github.com/user/YTPlusM/releases.)</li>
   </ol>
 </details>
 
