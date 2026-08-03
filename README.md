@@ -106,13 +106,14 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
 > [!NOTE]
 > If this your first time, complete following steps before starting:
 >
-> 1. [Fork this repository](https://github.com/Mark02-2012/YTPlusM/fork) using the fork button on the top right
-> 2. On your forked repository, go to **Repository Settings** > **Actions**, enable **Read and Write** permissions.
+> 1. [Fork this repository](https://github.com/Mark02-2012/YTPlusM/fork) using this link or the fork button on the top right (If you already have YTLite or similar fork that prevents you from forking my YTPlusM, you should delete that fork to be able to fork my repository).
+> 2. On your forked YTPlusM repository, go to **Repository Settings** > **Actions**, enable **Read and Write** permissions.
+> 3. Then go to the tab **Actions** (if you can't find it, you can just add /actions to the url) and click on the green button **I understand my workflows, go ahead and enable them**.
 
 <details>
   <summary>How to build YTPlus and YTPlusM app</summary>
   <ol>
-    <li>If you already have a fork of MY repository, click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
+    <li>If you already have a fork of MY repository YTPlusM, click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
     <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>Create YouTube Plus or YTPlusM app</strong>.</li>
     <li>Click the <strong>Run workflow</strong> button located on the right side.</li>
     <li>Mark or unmark the tweaks you want to integrate. Learn more about them in the <a href="#tweak-integration-details">Tweak Integration Details</a> section.</li>
