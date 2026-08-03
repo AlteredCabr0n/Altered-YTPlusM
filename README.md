@@ -108,7 +108,7 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
 >
 > 1. [Fork this repository](https://github.com/Mark02-2012/YTPlusM/fork) using this link or the fork button on the top right (If you already have YTLite or similar fork that prevents you from forking my YTPlusM, you should delete that fork to be able to fork my repository).
 > 2. On your forked YTPlusM repository, go to **Repository Settings** > **Actions**, enable **Read and Write** permissions.
-> 3. Then go to the tab **Actions** (if you can't find it, you can just add /actions to the url) and click on the green button **I understand my workflows, go ahead and enable them**.
+> 3. Then go to the **Actions** tab (if you can't find it, you can just add /actions to the url) and click on the green button **I understand my workflows, go ahead and enable them**.
 
 <details>
   <summary>How to build YTPlus and YTPlusM app</summary>
