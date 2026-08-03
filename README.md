@@ -143,6 +143,20 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
   </ol>
 </details>
 
+<details>
+  <summary>How to generate debs file of all the integrated tweaks</summary>
+  <ol>
+    <li>If you already have a fork of MY repository YTPlusM, click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
+    <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>Generate deb files</strong>.</li>
+    <li>Click the <strong>Run workflow</strong> button located on the right side.</li>
+    <li>Mark or unmark the tweaks you want to generate. Learn more about them in the <a href="#tweak-integration-details">Tweak Integration Details</a> section.</li>
+    <li>Enter the YTPlus/Lite version (starting from 5.1 to 5.2.2 cracked, no 5.2; <strong>the latest is selected by default</strong>).</li>
+    <li>Make sure all inputs are correct, then click <strong>Run workflow</strong> to start the process.</li>
+    <li>Wait for the build to finish. You can download the generated debs from the Artifacts section when the build has finished. (If you can't find the Artifacts section, reload the page.)</li>
+  </ol>
+</details>
+
+
 ## How to find decrypted YouTube IPAs
 
 **If you have Telegram:**
