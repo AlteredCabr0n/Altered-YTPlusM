@@ -1,4 +1,4 @@
-name: Generate deb files (testing)
+name: Generate deb files
 
 on:
   workflow_dispatch:
