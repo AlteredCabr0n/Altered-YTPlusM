@@ -271,7 +271,7 @@ jobs:
       - name: Build YouPiP
         if: ${{ inputs.enable_youpip }}
         run: |
-          cd YouPiP && make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          cd YouPiP && make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless THEOS_OBJ_DIR=${{ github.workspace }}/packages
 
       - name: Build YTUHD
         if: ${{ inputs.enable_ytuhd }}
