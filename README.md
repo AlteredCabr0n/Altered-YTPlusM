@@ -147,7 +147,7 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
   <summary>How to generate debs file of all the integrated tweaks (also for jailbreak)</summary>
   <ol>
     <blockquote>
-      <p><strong>NOTE:</strong>All the generated files are rootless, except for YTPlus and YTLowContrastMode, as they do not currently support rootless.</p>
+      <p><strong>NOTE:</strong> All the generated files are rootless, except for YTPlus and YTLowContrastMode, as they do not currently support rootless.</p>
     </blockquote>
     <li>If you already have a fork of MY repository YTPlusM, click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
     <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>Generate deb files</strong>.</li>
