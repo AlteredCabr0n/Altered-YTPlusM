@@ -373,20 +373,31 @@ jobs:
           git sparse-checkout set --no-cone OpenYoutubeSafariExtension.appex
           git checkout
 
+      - name: Svuota e prepara le cartelle di output
+        if: always()
+        run: |
+          rm -rf ${{ github.workspace }}/output_debs
+          rm -rf ${{ github.workspace }}/output_appex
+          mkdir -p ${{ github.workspace }}/output_debs
+          mkdir -p ${{ github.workspace }}/output_appex
+
       - name: Collect all generated debs and appex
         if: always()
         run: |
-          # 1. Forza la ricerca profonda di tutti i file .deb ignorando ytplus.deb
-          find ${{ github.workspace }} -type f -name "*.deb" -not -name "ytplus.deb" -not -path "*/packages/*" -exec cp {} ${{ github.workspace }}/packages/ \;
+          # 1. Trova e copia tutti i .deb escludendo ytplus.deb
+          find ${{ github.workspace }} -type f -name "*.deb" -not -name "ytplus.deb" -not -path "*/output_debs/*" -exec cp {} ${{ github.workspace }}/output_debs/ \;
           
-          # 2. Copia i bundle .appex mantenendo intatta la cartella (non i file sciolti)
-          find ${{ github.workspace }} -type d -name "*.appex" -not -path "*/packages/*" -exec cp -R {} ${{ github.workspace }}/packages/ \;
+          # 2. Trova e copia le cartelle .appex (Estensioni Safari) mantenendo la struttura interna
+          find ${{ github.workspace }} -type d -name "*.appex" -not -path "*/output_appex/*" -exec cp -R {} ${{ github.workspace }}/output_appex/ \;
 
       - name: Upload built debs as artifacts
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: built-debs
-          path: ${{ github.workspace }}/packages/
+          # Usiamo un pattern jolly per caricare entrambe le cartelle mantenendo separate le gerarchie
+          path: |
+            ${{ github.workspace }}/output_debs/*.deb
+            ${{ github.workspace }}/output_appex/**/*.appex
           if-no-files-found: ignore
           retention-days: 1
