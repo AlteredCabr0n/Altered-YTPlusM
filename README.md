@@ -144,7 +144,7 @@ Review by [@qbap](https://github.com/qbap) on ONE Jailbreak: https://onejailbrea
 </details>
 
 <details>
-  <summary>How to generate debs file of all the integrated tweaks (also for jailbreak)</summary>
+  <summary>How to generate deb files of all the integrated tweaks (also for jailbreak)</summary>
   <ol>
     <blockquote>
       <p><strong>NOTE:</strong> All generated .deb files are built as rootless (iphoneos-arm64), except for YTPlus, which is compiled in rootful format (iphoneos-arm). If you are using a rootless jailbreak, please convert the YTPlus package using Derootifier.</p>
