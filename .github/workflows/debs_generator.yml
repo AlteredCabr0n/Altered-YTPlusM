@@ -376,22 +376,17 @@ jobs:
       - name: Collect all generated debs and appex
         if: always()
         run: |
-          find ${{ github.workspace }} -name "*.deb" -not -name "ytplus.deb" -not -path "*/packages/*" -exec cp {} ${{ github.workspace }}/packages/ \;
+          # 1. Forza la ricerca profonda di tutti i file .deb ignorando ytplus.deb
+          find ${{ github.workspace }} -type f -name "*.deb" -not -name "ytplus.deb" -not -path "*/packages/*" -exec cp {} ${{ github.workspace }}/packages/ \;
           
-          find ${{ github.workspace }} -name "*.appex" -type d -not -path "*/packages/*" -exec cp -r {} ${{ github.workspace }}/packages/ \;
-
-      - name: Prepare Artifacts
-        if: always()
-        run: |
-          mkdir -p output
-          cp -r packages/* output/ 2>/dev/null || true
+          # 2. Copia i bundle .appex mantenendo intatta la cartella (non i file sciolti)
+          find ${{ github.workspace }} -type d -name "*.appex" -not -path "*/packages/*" -exec cp -R {} ${{ github.workspace }}/packages/ \;
 
       - name: Upload built debs as artifacts
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: built-debs
-          path: output/
+          path: ${{ github.workspace }}/packages/
           if-no-files-found: ignore
           retention-days: 1
-
