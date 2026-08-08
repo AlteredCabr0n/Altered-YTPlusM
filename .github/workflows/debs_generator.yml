@@ -58,7 +58,7 @@ on:
        default: false
 
       enable_ytlcm:
-       description: "Generate YTLowContrastMode (YTPlusM)"
+       description: "Generate YTLowContrastMode (YTPlusM; only arm.deb at the moment)"
        type: boolean
        required: true
        default: false
@@ -106,7 +106,7 @@ on:
        default: false
 
       tweak_version:
-        description: "The version of YTPlus/YTLite to generate. Versions that you can generate are from 5.1 to 5.2.2 (no 5.2; all without subscription required)"
+        description: "The version of YTPlus/YTLite to generate (only arm.deb). Versions that you can generate are from 5.1 to 5.2.2 (no 5.2; all without subscription required)"
         default: "5.2.2"
         required: true
         type: string
@@ -384,10 +384,8 @@ jobs:
       - name: Collect all generated debs and appex
         if: always()
         run: |
-          # 1. Trova e copia tutti i .deb escludendo ytplus.deb
-          find ${{ github.workspace }} -type f -name "*.deb" -not -name "ytplus.deb" -not -path "*/output_debs/*" -exec cp {} ${{ github.workspace }}/output_debs/ \;
+          find ${{ github.workspace }} -type f -name "*.deb" -not -path "*/output_debs/*" -exec cp {} ${{ github.workspace }}/output_debs/ \;
           
-          # 2. Trova e copia le cartelle .appex (Estensioni Safari) mantenendo la struttura interna
           find ${{ github.workspace }} -type d -name "*.appex" -not -path "*/output_appex/*" -exec cp -R {} ${{ github.workspace }}/output_appex/ \;
 
       - name: Upload built debs as artifacts
@@ -395,7 +393,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: built-debs
-          # Usiamo un pattern jolly per caricare entrambe le cartelle mantenendo separate le gerarchie
           path: |
             ${{ github.workspace }}/output_debs/*.deb
             ${{ github.workspace }}/output_appex/**/*.appex
