@@ -120,14 +120,7 @@ jobs:
     name: Build Tweaks
     runs-on: macos-latest
 
-    steps:
-      - name: Check for conflicting inputs
-        run: |
-          if [[ "${{ inputs.enable_ytpf }}" == "true" && "${{ inputs.enable_ytpfBETA }}" == "true" ]]; then
-            echo "::error::You can't select both inputs 'Integrate YTPlaybackFix' and 'Integrate YTPlaybackFix beta' at the same time. Please select only one of them."
-            exit 1
-          fi
-          
+    steps: 
       - name: Install Dependencies
         run: brew install make ldid dpkg
 
