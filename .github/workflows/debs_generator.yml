@@ -58,7 +58,7 @@ on:
        default: false
 
       enable_ytlcm:
-       description: "Generate YTLowContrastMode (YTPlusM; only arm.deb at the moment)"
+       description: "Generate YTLowContrastMode (YTPlusM)"
        type: boolean
        required: true
        default: false
