@@ -106,7 +106,7 @@ on:
        default: false
 
       tweak_version:
-        description: "The version of YTPlus/YTLite to generate. Versions that you can generate are from 5.1 to 5.2.2 (no 5.2; all without subscription required)"
+        description: "The version of YTPlus/YTLite to generate (rootful, but you can use Derootifier to convert it to rootless). Versions that you can generate are from 5.1 to 5.2.2 (no 5.2; all without subscription required)"
         default: "5.2.2"
         required: true
         type: string
