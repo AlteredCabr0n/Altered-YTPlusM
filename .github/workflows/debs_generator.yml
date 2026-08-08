@@ -271,7 +271,7 @@ jobs:
       - name: Build YouPiP
         if: ${{ inputs.enable_youpip }}
         run: |
-          cd YouPiP && make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless THEOS_OBJ_DIR=${{ github.workspace }}/packages
+          cd YouPiP && make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
 
       - name: Build YTUHD
         if: ${{ inputs.enable_ytuhd }}
@@ -373,16 +373,25 @@ jobs:
           git sparse-checkout set --no-cone OpenYoutubeSafariExtension.appex
           git checkout
 
+      - name: Collect all generated debs and appex
+        if: always()
+        run: |
+          find ${{ github.workspace }} -name "*.deb" -not -name "ytplus.deb" -not -path "*/packages/*" -exec cp {} ${{ github.workspace }}/packages/ \;
+          
+          find ${{ github.workspace }} -name "*.appex" -type d -not -path "*/packages/*" -exec cp -r {} ${{ github.workspace }}/packages/ \;
+
       - name: Prepare Artifacts
+        if: always()
         run: |
           mkdir -p output
-          cp packages/*.deb output/
-          cp packages/*.appex output/
+          cp -r packages/* output/ 2>/dev/null || true
 
       - name: Upload built debs as artifacts
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: built-debs
-          path: output/*
+          path: output/
           if-no-files-found: ignore
           retention-days: 1
+
