@@ -1,7 +1,7 @@
 <h1 align="center">YTPlusM</h1>
 <p align="center">
   <img src="Resources/YTPlusM.png" width="435"><br>
-  The best fork of <a href="https://github.com/dayanch96/YTLite">YTLite</a>, the incredible enhancer for the YouTube app on iOS. Features over 100 customizable options, updated to the latest version without any subscription, and packed with even more tweaks than the original.
+  The best fork of <a href="https://github.com/dayanch96/YTLite">YTPlus</a>, the incredible enhancer for the YouTube app on iOS. Features over 100 customizable options, updated to the latest version without any subscription, and packed with even more tweaks than the original.
 </p>
 
 <h3 align="center">
