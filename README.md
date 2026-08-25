@@ -284,70 +284,70 @@ Updated YouTube Plus from 5.2.1 to 5.2.2; cracked by <a href="https://www.reddit
 </details>
 
 <details>
- <summary>YTweaks (only on YTPlusM versions)</summary>
+ <summary>YTweaks (only in MaxTube versions)</summary>
  <p>YTweaks is a tweak developed by <a href="https://github.com/fosterbarnes">fosterbarnes</a> that adds various tweaks for the iOS YouTube app.</p>
  <p><strong>YTweaks preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/fosterbarnes/YTweaks">in fosterbarnes' repository</a>.</p>
 </details>
 
 <details>
- <summary>Gonerino (only on YTPlusM versions)</summary>
+ <summary>Gonerino (only in MaxTube versions)</summary>
  <p>Gonerino is a tweak developed by <a href="https://github.com/castdrian">castdrian</a>, a tweak to block specific videos, channels and words for the iOS YouTube app.</p>
  <p><strong>Gonerino preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/castdrian/Gonerino">in castdrian's repository</a>.</p>
 </details>
 
 <details>
- <summary>YouSpeed (only on YTPlusM versions)</summary>
+ <summary>YouSpeed (only in MaxTube versions)</summary>
  <p>YouSpeed is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a>, a tweak to view, change and add video speed options in the video overlay.</p>
  <p><strong>YouSpeed preferences</strong> are available in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouSpeed">in PoomSmart's repository</a>.</p>
 </details>
 
 <details>
- <summary>YTLowContrastMode (only on YTPlusM versions)</summary>
+ <summary>YTLowContrastMode (only in MaxTube versions)</summary>
  <p>YTLowContrastMode is a tweak developed by <a href="https://github.com/arichornlover">arichornlover</a>, a Tweak to make YT and YTMusic apps' Interface Low Contrast as possible and Easy on the eyes. (In the IPAs will be used my fork of it)</p>
  <p>YTLowContrastMode preferences are available in the <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/Mark02-2012/YTLowContrastMode">in mine repository</a>.</p>
 </details>
 
 <details>
- <summary>VolumeBoostYT (only on YTPlusM versions)</summary>
+ <summary>VolumeBoostYT (only in MaxTube versions)</summary>
  <p>VolumeBoostYT is a tweak developed by <a href="https://github.com/VasirakCalgux">VasirakCalgux</a> that provides an independent, gesture-based volume control for the YouTube app, completely separate from the system volume.</p>
  <p><strong>VolumeBoostYT preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/VasirakCalgux/VolumeBoostYT">in VasirakCalgux's repository</a>.</p>
 </details>
 
 <details>
- <summary>YouGetCaption (only on YTPlusM versions)</summary>
+ <summary>YouGetCaption (only in MaxTube versions)</summary>
  <p>YouGetCaption is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that views and copies video caption from YouTube app from the video overlay.</p>
  <p><strong>YouGetCaption preferences</strong> are available in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouGetCaption">in PoomSmart's repository</a>.</p>
 </details>
 
 <details>
- <summary>YTPlaybackFix (only on YTPlusM versions)</summary>
+ <summary>YTPlaybackFix (only in MaxTube versions)</summary>
  <p>YTPlaybackFix is a tweak developed by me that try to fix playback issues by refreshing the video every time the error 14 appears ("something went wrong")</p>
  <p><strong>YTPlaybackFix preferences</strong> for the moment are <strong>not available</strong> as the tweak will refresh videos only if the error appears.</p>
  <p>Source code and additional information are available <a href="https://github.com/Mark02-2012/YTPlaybackFix">in my repository</a>.</p>
 </details>
 
 <details>
- <summary>YouChooseQuality (only on YTPlusM versions)</summary>
+ <summary>YouChooseQuality (only in MaxTube versions)</summary>
  <p>YouChooseQuality is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that auto-selects the video quality of choice in iOS YouTube app.</p>
  <p><strong>YouChooseQuality preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouChooseQuality">in PoomSmart's repository</a>.</p>
 </details>
 
 <details>
- <summary><strong>YouShare (only on YTPlusM versions)</summary>
+ <summary><strong>YouShare (only in MaxTube versions)</summary>
  <p>YouShare is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> (but I'm using <a href="https://github.com/Tonwalter888/YouShare">this fork</a> by <a href="https://github.com/Tonwalter888">TonWalter888</a>) that allows you to share videos faster in iOS YouTube app.</p>
  <p><strong>YouShare preferences</strong> are available in the <strong>Video Overlay</strong> section under <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/Tonwalter888/YouShare">in Tonwalter888's repository</a>.</p>
 </details>
 
 <details>
- <summary>PleaseDontStopTheMusic (only on YTPlusM versions)</summary>
+ <summary>PleaseDontStopTheMusic (only in MaxTube versions)</summary>
  <p>PleaseDontStopTheMusic is a tweak developed by <a href="https://github.com/mikey820">mikey820</a> that prevents apps (e.g. Roblox) from pausing your background music.</p>
  <p><strong>PleaseDontStopTheMusic preferences</strong> are not available.</p>
  <p>Source code and additional information are available <a href="https://github.com/mikey820/PleaseDontStopTheMusic">in mikey820's repository</a>.</p>
