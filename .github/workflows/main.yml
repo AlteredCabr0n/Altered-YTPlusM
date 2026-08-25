@@ -1,4 +1,4 @@
-name: Create YouTube Plus or YTPlusM app
+name: Create YouTube Plus or MaxTube app
 
 on:
   workflow_dispatch:
@@ -40,67 +40,79 @@ on:
         default: false
 
       enable_ytweaks:
-        description: "Integrate YTweaks (YTPlusM)"
+        description: "Integrate YTweaks (MaxTube)"
         type: boolean
         required: true
         default: false
         
       enable_gonerino:
-        description: "Integrate Gonerino (YTPlusM)"
+        description: "Integrate Gonerino (MaxTube)"
         type: boolean
         required: true
         default: false
 
       enable_youspeed:
-       description: "Integrate YouSpeed (YTPlusM)"
+       description: "Integrate YouSpeed (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_ytlcm:
-       description: "Integrate YTLowContrastMode (YTPlusM)"
+       description: "Integrate YTLowContrastMode (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_VolumeBoostYT:
-       description: "Integrate VolumeBoostYT (YTPlusM)"
+       description: "Integrate VolumeBoostYT (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_YouGetCaption:
-       description: "Integrate YouGetCaption (YTPlusM)"
+       description: "Integrate YouGetCaption (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_ytpf:
-       description: "Integrate YTPlaybackFix, my new tweak! (YTPlusM)"
+       description: "Integrate YTPlaybackFix, my tweak (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_ytpfBETA:
-       description: "Integrate my YTPlaybackFix but latest beta version, at your own risk... (YTPlusM)"
+       description: "Integrate my YTPlaybackFix but latest beta version, at your own risk... (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_ycq:
-       description: "NEW! Integrate YouChooseQuality (YTPlusM)"
+       description: "Integrate YouChooseQuality (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_ys:
-       description: "NEW! Integrate YouShare (YTPlusM)"
+       description: "Integrate YouShare (MaxTube)"
        type: boolean
        required: true
        default: false
 
       enable_pdstm:
-       description: "NEW! Integrate PleaseDontStopTheMusic (YTPlusM)"
+       description: "Integrate PleaseDontStopTheMusic (MaxTube)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_youloop:
+       description: "NEW! Integrate YouLoop (MaxTube)"
+       type: boolean
+       required: true
+       default: false
+
+      enable_youmute:
+       description: "NEW! Integrate YouMute (MaxTube)"
        type: boolean
        required: true
        default: false
@@ -129,12 +141,6 @@ on:
         required: true
         type: string
 
-      info_note:
-        description: "TIP: Learn more about integrations in the README via the link below"
-        default: "https://github.com/Mark02-2012/YTPlusM#tweak-integration-details"
-        type: string
-        required: false
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -160,6 +166,8 @@ jobs:
       enable_ycq: ${{ inputs.enable_ycq }}
       enable_ys: ${{ inputs.enable_ys }}
       enable_pdstm: ${{ inputs.enable_pdstm }}
+      enable_youloop: ${{ inputs.enable_youloop }}
+      enable_youmute: ${{ inputs.enable_youmute }}
       tweak_version: ${{ inputs.tweak_version }}
 
 
@@ -186,7 +194,7 @@ jobs:
       - name: Hide sensitive inputs
         uses: levibostian/action-hide-sensitive-inputs@v1
         with:
-          exclude_inputs: bundle_id,display_name,enable_demc,enable_ryd,enable_ytabc,enable_youpip,enable_yq,enable_ytuhd,enable_ytweaks,enable_gonerino,enable_youspeed,enable_ytlcm,enable_VolumeBoostYT,enable_YouGetCaption,enable_ycq,enable_ys,enable_pdstm,info_note,tweak_version
+          exclude_inputs: bundle_id,display_name,enable_demc,enable_ryd,enable_ytabc,enable_youpip,enable_yq,enable_ytuhd,enable_ytweaks,enable_gonerino,enable_youspeed,enable_ytlcm,enable_VolumeBoostYT,enable_YouGetCaption,enable_ycq,enable_ys,enable_pdstm,enable_youloop,enable_youmute,enable_ytlocalqueue,info_note,tweak_version
           
 
       - name: Download and validate IPA
@@ -215,11 +223,13 @@ jobs:
              [ "${{ inputs.enable_ycq }}" = "false" ] && \
              [ "${{ inputs.enable_ys }}" = "false" ] && \
              [ "${{ inputs.enable_pdstm }}" = "false" ] && \
+             [ "${{ inputs.enable_youloop }}" = "false" ] && \
+             [ "${{ inputs.enable_youmute }}" = "false" ] && \
              [ "${{ inputs.enable_ytpfBETA }}" = "false" ]; then
             
             echo "RELEASE_PREFIX=YTPlus" >> $GITHUB_ENV
           else
-            echo "RELEASE_PREFIX=YTPlusM" >> $GITHUB_ENV
+            echo "RELEASE_PREFIX=MaxTube" >> $GITHUB_ENV
           fi
 
       - name: Install cyan
@@ -275,4 +285,4 @@ jobs:
 
       - name: Output Release URL
         run: |
-          echo "::notice::🚀Build completed! Release available at: https://github.com/${{ github.repository }}/releases"
+          echo "::notice::🚀Build completed! Release available at: https://github.com/${{ github.repository }}/releases" 
