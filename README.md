@@ -209,9 +209,13 @@ Added YouChooseQuality, YouShare and PleaseDontStopTheMusic + replaced YTLowCont
 Updated YouTube Plus from 5.2.1 to 5.2.2; cracked by <a href="https://www.reddit.com/u/shinewake/s/ZeFbBOkUAa">zarzel</a> and compiled the .deb by myself
 <li><strong>1.5 (August 24 2026):</strong></li>
 • Changed name from YTPlusM to MaxTube
+
 • Fixed YTLowContrastMode setting section not showing in 20.x versions.
+
 • Added YouLoop and YouMute (in Video Overlay settings).
-• Replaced Gonerino by castdrian with the fork YGonerino by fosterbarnes
+
+• Replaced Gonerino by castdrian with the fork YGonerino by fosterbarnes.
+
 • Updated my tweak YTPlaybackFix. It is now a combination of my method (refreshing the video player when it detects the error; fixed the loop issue, incompatibility with 20.x versions of YouTube, added support for error code 0, and incompatibility with RootHide Patcher) and the method by @AppropriateNet_2928 named YouFixPlaybackIssues (spoof client and experimental PoToken bypass). Includes a setting section to enable/disable each method. Both are enabled by default.
 
 ## Supported YouTube Version
