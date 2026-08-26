@@ -1,4 +1,4 @@
-name: Create YTPlusM iPA (Altered-Patch)
+name: Create YTPlusM iPA [Altered-Patch]
 
 on:
   workflow_dispatch:
@@ -40,79 +40,79 @@ on:
         default: false
 
       enable_ytweaks:
-        description: "Integrate YTweaks (YTPlusM)"
+        description: "Integrate YTweaks"
         type: boolean
         required: true
         default: false
         
       enable_gonerino:
-        description: "Integrate Gonerino (YTPlusM)"
+        description: "Integrate Gonerino"
         type: boolean
         required: true
         default: false
 
       enable_youspeed:
-       description: "Integrate YouSpeed (YTPlusM)"
+       description: "Integrate YouSpeed"
        type: boolean
        required: true
        default: false
 
       enable_ytlcm:
-       description: "Integrate YTLowContrastMode (YTPlusM)"
+       description: "Integrate YTLowContrastMode"
        type: boolean
        required: true
        default: false
 
       enable_VolumeBoostYT:
-       description: "Integrate VolumeBoostYT (YTPlusM)"
+       description: "Integrate VolumeBoostYT"
        type: boolean
        required: true
        default: false
 
       enable_YouGetCaption:
-       description: "Integrate YouGetCaption (YTPlusM)"
+       description: "Integrate YouGetCaption"
        type: boolean
        required: true
        default: false
 
       enable_ytpf:
-       description: "Integrate YTPlaybackFix, my tweak (YTPlusM)"
+       description: "Integrate YTPlaybackFix"
        type: boolean
        required: true
        default: false
 
       enable_ytpfBETA:
-       description: "Integrate my YTPlaybackFix but latest beta version, at your own risk... (YTPlusM)"
+       description: "Integrate my YTPlaybackFix (beta version)"
        type: boolean
        required: true
        default: false
 
       enable_ycq:
-       description: "Integrate YouChooseQuality (YTPlusM)"
+       description: "Integrate YouChooseQuality"
        type: boolean
        required: true
        default: false
 
       enable_ys:
-       description: "Integrate YouShare (YTPlusM)"
+       description: "Integrate YouShare"
        type: boolean
        required: true
        default: false
 
       enable_pdstm:
-       description: "Integrate PleaseDontStopTheMusic (YTPlusM)"
+       description: "Integrate PleaseDontStopTheMusic"
        type: boolean
        required: true
        default: false
 
       enable_youloop:
-       description: "NEW! Integrate YouLoop (YTPlusM)"
+       description: "Integrate YouLoop"
        type: boolean
        required: true
        default: false
 
       enable_youmute:
-       description: "NEW! Integrate YouMute (YTPlusM)"
+       description: "Integrate YouMute"
        type: boolean
        required: true
        default: false
