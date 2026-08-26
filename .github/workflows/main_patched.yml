@@ -82,7 +82,7 @@ on:
        default: false
 
       enable_ytpfBETA:
-       description: "Integrate my YTPlaybackFix (beta version)"
+       description: "Integrate YTPlaybackFix (beta version)"
        type: boolean
        required: true
        default: false
