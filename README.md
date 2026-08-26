@@ -1,5 +1,21 @@
-# Altered-YTPlusM
-An **altered** version of the BEST fork of enhancer for YouTube on iOS, <a href="https://github.com/Mark02-2012/YTPlusM-DIY">YTPlusM</a>. Featuring over hundred customizable options but with the latest version freed and with more tweaks than  <a href="https://github.com/dayanch96/YTLite">YouTube Plus.</a>
+<h1 align="center">Altered-YTPlusM</h1>
+<p align="center">
+  <img src="Resources/Altered-YTPlusM#1.png" width="435"><br>
+  An <strong>altered</strong> version of the BEST fork of enhancer for YouTube on iOS, <a href="https://github.com/Mark02-2012/YTPlusM">YTPlusM</a>. Featuring over hundred customizable options but with the latest version freed and with more tweaks than  <a href="https://github.com/dayanch96/YTLite">YouTube Plus.</a>
+</p>
+
+<h3 align="center">
+ <strong>Disclaimer</strong>
+</h3>
+
+<p align="center">
+  This project is an independent developer modification and is not affiliated with, authorized, maintained, sponsored, or endorsed by Google LLC or YouTube. All product and company names are trademarks of their respective holders.
+</p>
+
+<h3 align="center">
+   <strong>More info</strong>
+</h3>
+
 
 
 
@@ -9,8 +25,9 @@ An **altered** version of the BEST fork of enhancer for YouTube on iOS, <a href=
 - [Screenshots](#screenshots)
 - [Main Features](#main-features)
 - [FAQ](#faq)
-- [How-to Create the YTPlusM app(s) D.I.Y.](#how-to-create-the-ytplusm-apps-diy)
 - ['YTPlusM' vs 'Altered-YTPlusM'](#ytplusm-vs-altered-ytplusm)
+- [How-to Create the YTPlusM app(s) D.I.Y.](#how-to-create-the-ytplusm-apps-diy)
+- [How-to Generate .DEB files](#how-to-generate-deb-files)
 - [Supported YouTube Version](#supported-youtube-version)
 - [Supported YouTube Version For iOS 15](#supported-youtube-version-for-ios-15)
 - [Tweak Integration Details](#tweak-integration-details)
@@ -126,19 +143,38 @@ An **altered** version of the BEST fork of enhancer for YouTube on iOS, <a href=
   </ol>
 </details>
 
+## How-to Generate .DEB files
+<details>
+  <summary>How to generate deb files of all the integrated tweaks (also for jailbreak)</summary>
+  <ol>
+    <blockquote>
+      <p><strong>NOTE:</strong> All generated .deb files are built as rootless (iphoneos-arm64), except for YTPlus, which is compiled in rootful format (iphoneos-arm). If you are using a rootless jailbreak, please convert the YTPlus package using Derootifier.</p>
+    </blockquote>
+    <li>If you already have a fork of MY repository Altered-YTPlusM, click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
+    <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>Generate deb files</strong>.</li>
+    <li>Click the <strong>Run workflow</strong> button located on the right side.</li>
+    <li>Mark or unmark the tweaks you want to generate. Learn more about them in the <a href="#tweak-integration-details">Tweak Integration Details</a> section.</li>
+    <li>Enter the YTPlus/Lite version (starting from 5.1 to 5.2.2 cracked, no 5.2; <strong>the latest is selected by default</strong>).</li>
+    <li>Make sure all inputs are correct, then click <strong>Run workflow</strong> to start the process.</li>
+    <li>Wait for the build to finish. You can download the generated debs from the Artifacts section when the build has finished. (If you can't find the Artifacts section, reload the page.)</li>
+  </ol>
+</details>
+
+
 ## Supported YouTube Version
 <ul>
-   <li><strong>Latest confirmed:</strong> <em>21.22.4</em></li>
-   <li><strong>Date tested:</strong> <em>May 30, 2026</em></li>
-   <li><strong>YouTube Plus:</strong> <em>5.2.1</em></li>
+   <li><strong>Latest confirmed:</strong> <em>21.33.6</em></li>
+   <li><strong>Recommended for working downloads:</strong> <em>21.24.3</em></li>
+   <li><strong>Date tested:</strong> <em>August 24, 2026</em></li>
+   <li><strong>YouTube Plus:</strong> <em>5.2.2</em></li>
 </ul>
 <strong>⚠️YTPlus 5.2b4 doesn't work with the latest versions of yt (from 21.14.4 and above), so use YTPlus 5.2.1 to build YTPlusM with newest yt versions⚠️</strong>
 
 ## Supported YouTube Version For iOS 15
 <ul>
    <li><strong>Latest confirmed:</strong> <em>20.21.6</em></li>
-   <li><strong>Date tested:</strong> <em>Apr 12 2026</em></li>
-   <li><strong>YouTube Plus:</strong> <em>5.2 beta 4</em></li>
+   <li><strong>Date tested:</strong> <em>July 24, 2026</em></li>
+   <li><strong>YouTube Plus:</strong> <em>5.2.2</em></li>
 <p>View <a href="https://github.com/Mark02-2012/YTPlus_by_Mark02/releases/tag/5.2b4_20.21.6">this release (YouTube Plus)</a> and <a href="https://github.com/Mark02-2012/YTPlusM/releases/tag/5.2.1_20.21.6(54)">this release (YTPlusM)</p>
 </ul>
 
@@ -255,7 +291,7 @@ An **altered** version of the BEST fork of enhancer for YouTube on iOS, <a href=
 </details>
 
 <details>
- <summary><strong>NEW!</strong> YTPlaybackFix</summary>
+ <summary>YTPlaybackFix</summary>
  <p><p>YTPlaybackFix is a tweak developed by <a href="https://github.com/Mark02-2012">Mark02-2012</a> that tries to fix playback issues by refreshing the video every time the error 14 appears ("something went wrong")</p>
      <p><blockquote>
         <p><strong>NOTE:</strong>
@@ -266,14 +302,46 @@ An **altered** version of the BEST fork of enhancer for YouTube on iOS, <a href=
  <p><em>You can build your version of YTPlusM now! View <a href=#how-to-create-the-ytplusm-apps-diy>How-to Create the YTPlusM app(s) D.I.Y.</a> and <a href=#ytplusm-vs-altered-ytplusm>'YTPlusM' vs 'Altered-YTPlusM'</a> (or <a href="https://t.me/Mark02workshop_official">join my telegram channel</a> to download the pre-built IPA with this new tweak)</em></p></p>
 </details>
 
+<details>
+ <summary>YouChooseQuality</summary>
+ <p><p>YouChooseQuality is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that auto-selects the video quality of choice in iOS YouTube app.</p>
+ <p><strong>YouChooseQuality preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
+ <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouChooseQuality">in PoomSmart's repository</a>.</p></p>
+</details>
+
+<details>
+ <summary><strong>YouShare</summary>
+ <p><p>YouShare is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> (but I'm using <a href="https://github.com/Tonwalter888/YouShare">this fork</a> by <a href="https://github.com/Tonwalter888">TonWalter888</a>) that allows you to share videos faster in iOS YouTube app.</p>
+ <p><strong>YouShare preferences</strong> are available in the <strong>Video Overlay</strong> section under <strong>YouTube settings</strong>.</p>
+ <p>Source code and additional information are available <a href="https://github.com/Tonwalter888/YouShare">in Tonwalter888's repository</a>.</p></p>
+</details>
+
+<details>
+ <summary>PleaseDontStopTheMusic</summary>
+ <p><p>PleaseDontStopTheMusic is a tweak developed by <a href="https://github.com/mikey820">mikey820</a> that prevents apps (e.g. Roblox) from pausing your background music.</p>
+ <p><strong>PleaseDontStopTheMusic preferences</strong> are not available.</p>
+ <p>Source code and additional information are available <a href="https://github.com/mikey820/PleaseDontStopTheMusic">in mikey820's repository</a>.</p></p>
+</details>
+
+<details>
+ <summary>YouLoop</summary>
+ <p><p>YouLoop is a tweak developed by <a href="https://github.com/bhackel">bhackel</a> that adds a player button to enable/disable looping on the current video.</p>
+ <p><strong>YouLoop preferences</strong> are available in the <strong>Video Overlay</strong> section under <strong>YouTube settings</strong>.</p>
+ <p>Source code and additional information are available <a href="https://github.com/bhackel/YouLoop">in bhackel's repository</a>.</p></p>
+</details>
+
+
+
+
+
 ## Special thanks
 This project is alive **only** thanks to those guys:
 
 
-<a href="https://github.com/dayanch96">Dayanch96</a>: **creator of YTPlus**
+<a href="https://github.com/dayanch96">Dayanch96</a>: **creator of YTPlus/YTLite**
 
 
-<a href="https://www.reddit.com/u/shinewake/s/ZeFbBOkUAa">shinewake</a>: **patcher of YTPlus 5.2.1 (he removed Patreon DRM)**
+<a href="https://www.reddit.com/u/shinewake/s/ZeFbBOkUAa">shinewake</a>: **patcher of YTPlus/YTLite (he removed Patreon DRM)**
 
 
 <a href="https://github.com/bpetrynski">bpetrynski</a>: **creator of YTLocalQueue**
@@ -285,7 +353,7 @@ This project is alive **only** thanks to those guys:
 <a href="https://github.com/fosterbarnes">fosterbarnes</a>: **creator of YTweaks**
 
 
-<a href="https://github.com/PoomSmart">PoomSmart</a>: **creator of YouSpeed YouMute and YouGetCaption**
+<a href="https://github.com/PoomSmart">PoomSmart</a>: **creator of YouSpeed, YouGetCaption, YouChooseQuality, YouShare and YouMute**
 
 
 <a href="https://github.com/arichornlover">arichornlover</a>: **creator of YTLowContrastMode and YouTimeStamp**
@@ -296,7 +364,11 @@ This project is alive **only** thanks to those guys:
 
 <a href="https://github.com/VasirakCalgux">VasirakCalgux</a>: **creator of VolumeBoostYT**
 
+<a href="https://github.com/mikey820">mikey820</a>: **creator of PleaseDontStopTheMusic**
 
+<a href="https://github.com/bhackel">bhackel</a>: **creator of YouLoop**
+
+<a href="https://github.com/AppropriateNet2928">AppropriateNet2928</a>: **creator of YouFixPlaybackIssues, the other method used by my YTPlaybackFix**
 
 
 
