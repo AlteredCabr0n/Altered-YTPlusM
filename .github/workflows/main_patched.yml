@@ -1,4 +1,4 @@
-name: Create YTPlusM iPA [Altered-Patch]
+name: Create YTPlusM iPA (Altered-Patch)
 
 on:
   workflow_dispatch:
