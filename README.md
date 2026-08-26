@@ -1,6 +1,6 @@
 <h1 align="center">Altered-YTPlusM</h1>
 <p align="center">
-  <img src="Resources/AlteredYTPlusM1.png" width="435"><br>
+  <img src="Resources/AlteredYTPlusM3.png" width="435"><br>
   An <strong>altered</strong> version of the BEST fork of enhancer for YouTube on iOS, <a href="https://github.com/Mark02-2012/YTPlusM">YTPlusM</a>. Featuring over hundred customizable options but with the latest version freed and with more tweaks than  <a href="https://github.com/dayanch96/YTLite">YouTube Plus.</a>
 </p>
 
