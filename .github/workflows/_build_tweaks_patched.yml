@@ -117,7 +117,8 @@ jobs:
   build-tweaks:
     name: Build Tweaks
     runs-on: macos-latest
-          
+
+    steps:
       - name: Install Dependencies
         run: brew install make ldid dpkg
 
