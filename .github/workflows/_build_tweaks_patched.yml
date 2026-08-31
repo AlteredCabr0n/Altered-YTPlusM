@@ -68,11 +68,6 @@ on:
         required: true
         default: false
 
-      enable_ytpfBETA:
-        type: boolean
-        required: true
-        default: false
-
       enable_ycq:
         type: boolean
         required: true
@@ -122,14 +117,6 @@ jobs:
   build-tweaks:
     name: Build Tweaks
     runs-on: macos-latest
-
-    steps:
-      - name: Check for conflicting inputs
-        run: |
-          if [[ "${{ inputs.enable_ytpf }}" == "true" && "${{ inputs.enable_ytpfBETA }}" == "true" ]]; then
-            echo "::error::You can't select both inputs 'Integrate YTPlaybackFix' and 'Integrate YTPlaybackFix beta' at the same time. Please select only one of them."
-            exit 1
-          fi
           
       - name: Install Dependencies
         run: brew install make ldid dpkg
@@ -140,7 +127,7 @@ jobs:
           echo "THEOS=${{ github.workspace }}/theos" >> $GITHUB_ENV
 
       - name: Cache Theos
-        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ytpfBETA || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YTLocalQueue || inputs.enable_YouTimeStamp }}
+        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YTLocalQueue || inputs.enable_YouTimeStamp }}
         id: theos
         uses: actions/cache@v5
         env:
@@ -151,7 +138,7 @@ jobs:
           restore-keys: ${{ env.cache-name }}
 
       - name: Setup Theos
-        if: ${{ (inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ytpfBETA || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YTLocalQueue || inputs.enable_YouTimeStamp) && steps.theos.outputs.cache-hit != 'true' }}
+        if: ${{ (inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YTLocalQueue || inputs.enable_YouTimeStamp) && steps.theos.outputs.cache-hit != 'true' }}
         uses: actions/checkout@v6
         with:
           repository: theos/theos
@@ -160,7 +147,7 @@ jobs:
           submodules: recursive
 
       - name: Download iOS SDK
-        if: ${{ (inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ytpfBETA || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YTLocalQueue || inputs.enable_YouTimeStamp) && steps.theos.outputs.cache-hit != 'true' }}
+        if: ${{ (inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YTLocalQueue || inputs.enable_YouTimeStamp) && steps.theos.outputs.cache-hit != 'true' }}
         run: |
           git clone --quiet -n --depth=1 --filter=tree:0 https://github.com/theos/sdks/
           cd sdks
@@ -184,7 +171,7 @@ jobs:
           fi
 
       - name: Clone YouTubeHeader
-        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ytpfBETA || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YouTimeStamp }}
+        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YouTimeStamp }}
         run: |
           if [ -d "$THEOS/include/YouTubeHeader" ]; then
             cd $THEOS/include/YouTubeHeader && git pull
@@ -197,7 +184,7 @@ jobs:
           fi
 
       - name: Clone PSHeader
-        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ytpfBETA || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YouTimeStamp }}
+        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_YouGetCaption || inputs.enable_ytpf || inputs.enable_ycq || inputs.enable_ys || inputs.enable_pdstm || inputs.enable_youloop || inputs.enable_youmute || inputs.enable_YouTimeStamp }}
         run: |
           if [ -d "$THEOS/include/PSHeader" ]; then
             cd $THEOS/include/PSHeader && git pull
@@ -222,7 +209,7 @@ jobs:
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/YTABConfig.git
 
       - name: Clone YouGroupSettings
-        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_ytpf || inputs.enable_ytpfBETA }}
+        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_ytweaks || inputs.enable_gonerino || inputs.enable_youspeed || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_ytpf }}
         run: git clone --quiet --depth=1 https://github.com/PoomSmart/YouGroupSettings.git
 
       - name: Clone YouQuality
@@ -264,10 +251,6 @@ jobs:
       - name: Clone YTPlaybackFix
         if: ${{ inputs.enable_ytpf }}
         run: git clone --quiet --depth=1 https://github.com/Mark02-2012/YTPlaybackFix.git
-
-      - name: Clone YTPlaybackFix beta branch
-        if: ${{ inputs.enable_ytpfBETA }}
-        run: git clone --quiet --depth=1 -b beta-testing https://github.com/Mark02-2012/YTPlaybackFix.git
 
       - name: Clone YouChooseQuality
         if: ${{ inputs.enable_ycq }}
@@ -325,7 +308,7 @@ jobs:
           mv packages/*.deb ../ytabc.deb
 
       - name: Build YouGroupSettings
-        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_ytpf || inputs.enable_ytpfBETA }}
+        if: ${{ inputs.enable_youpip || inputs.enable_ytuhd || inputs.enable_yq || inputs.enable_ryd || inputs.enable_ytabc || inputs.enable_demc || inputs.enable_YTLCM || inputs.enable_VolumeBoostYT || inputs.enable_ytpf }}
         run: |
           cd YouGroupSettings && make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb ../ygs.deb
@@ -389,12 +372,6 @@ jobs:
         run: |
           cd YTPlaybackFix && make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ../ytpf.deb
-
-      - name: Build YTPlaybackfix beta
-        if: ${{ inputs.enable_ytpfBETA }}
-        run: |
-          cd YTPlaybackFix && make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ../ytpfbeta.deb
 
       - name: Build YouChooseQuality
         if: ${{ inputs.enable_ycq }}
