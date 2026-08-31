@@ -81,12 +81,6 @@ on:
        required: true
        default: false
 
-      enable_ytpfBETA:
-       description: "Integrate YTPlaybackFix (beta version)"
-       type: boolean
-       required: true
-       default: false
-
       enable_ycq:
        description: "Integrate YouChooseQuality"
        type: boolean
@@ -174,7 +168,6 @@ jobs:
       enable_VolumeBoostYT: ${{ inputs.enable_VolumeBoostYT }}
       enable_YouGetCaption: ${{ inputs.enable_YouGetCaption }}
       enable_ytpf: ${{ inputs.enable_ytpf }}
-      enable_ytpfBETA: ${{ inputs.enable_ytpfBETA }}
       enable_ycq: ${{ inputs.enable_ycq }}
       enable_ys: ${{ inputs.enable_ys }}
       enable_pdstm: ${{ inputs.enable_pdstm }}
@@ -238,8 +231,7 @@ jobs:
              [ "${{ inputs.enable_ys }}" = "false" ] && \
              [ "${{ inputs.enable_pdstm }}" = "false" ] && \
              [ "${{ inputs.enable_youloop }}" = "false" ] && \
-             [ "${{ inputs.enable_youmute }}" = "false" ] && \
-             [ "${{ inputs.enable_ytpfBETA }}" = "false" ]; then
+             [ "${{ inputs.enable_youmute }}" = "false" ]; then
             
             echo "RELEASE_PREFIX=YTPlusM" >> $GITHUB_ENV
           else
