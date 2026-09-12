@@ -103,6 +103,11 @@ on:
         required: true
         default: false
 
+      enable_ReturnYTCast:
+        type: boolean
+        required: true
+        default: false
+
       tweak_version:
         type: string
         required: false
@@ -284,6 +289,10 @@ jobs:
         if: ${{ inputs.enable_YouTimeStamp }}
         run: git clone --quiet --depth=1 https://github.com/thaibm92/YouTimeStamp.git
 
+      - name: Clone ReturnYTCast
+        if: ${{ inputs.enable_gonerino }}
+        run: git clone --quiet --depth=1 https://github.com/AlteredCabr0n/ReturnYTCast.git
+
       - name: Build YouPiP
         if: ${{ inputs.enable_youpip }}
         run: |
@@ -418,6 +427,12 @@ jobs:
         run: |
           cd YouTimeStamp && make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb ../youtimestamp.deb
+
+      - name: Build ReturnYTCast
+        if: ${{ inputs.enable_gonerino }}
+        run: |
+          cd YGonerino && make clean package DEBUG=0 FINALPACKAGE=1
+          mv packages/*.deb ../returnytcast.deb
 
       - name: Clone Open in YouTube (Safari extension)
         run: |
