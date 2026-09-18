@@ -310,7 +310,7 @@
 </details>
 
 <details>
- <summary><strong>YouShare</summary>
+ <summary>YouShare</summary>
  <p><p>YouShare is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> (but I'm using <a href="https://github.com/Tonwalter888/YouShare">this fork</a> by <a href="https://github.com/Tonwalter888">TonWalter888</a>) that allows you to share videos faster in iOS YouTube app.</p>
  <p><strong>YouShare preferences</strong> are available in the <strong>Video Overlay</strong> section under <strong>YouTube settings</strong>.</p>
  <p>Source code and additional information are available <a href="https://github.com/Tonwalter888/YouShare">in Tonwalter888's repository</a>.</p></p>
