@@ -189,7 +189,7 @@
 
 <details>
   <summary>YouMute</summary>
-  <p><p>YouPiP is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
+  <p><p>YouMute is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
   <p><strong>YouMute can be enabled</strong> in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
   <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouMute">in PoomSmart's GitHub repository</a>.</p></p>
 </details>
