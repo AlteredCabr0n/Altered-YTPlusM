@@ -188,31 +188,6 @@
 </details>
 
 <details>
-  <summary>YouMute</summary>
-  <p><p>YouMute is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
-  <p><strong>YouMute can be enabled</strong> in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
-  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouMute">in PoomSmart's GitHub repository</a>.</p></p>
-</details>
-
-<details>
-  <summary>YouTimeStamp</summary>
-  <p><p>YouTimeStamp is an iOS YouTube Tweak made for YTVideoOverlay. Forked by <a href="https://github.com/thaibm92">thaibm92</a> Adds a button that lets you copy your timestamp in the Video Player.</p>
-  <p><strong>YouTimeStamp can be enabled</strong> in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
-  <p>Find the latest updated files here: https://github.com/thaibm92/YouTimeStamp</p></p>
-</details>
-
-<details>
-  <summary><strong>YTLocalQueue*</strong></summary>
-  <p><p>YTLocalQueue is a tweak forked by <a href="https://github.com/oceandrift7">oceandrift7</a>. A YouTube tweak for creating + managing a video queue LOCALLY.</p>
-  <p><strong>YTLocalQueue preferences</strong> can be found in the <strong>YouTube settings</strong>.</p>
-    <p><blockquote>
-        <p><strong>NOTE:</strong>
-           YTLocalQueue is quite buggy and can cause other tweaks or the app to crash. Use with caution!</p>
-    </blockquote></p>
-  <p>Find the latest updated dylib/deb files here: https://github.com/oceandrift7/YTLocalQueue</p></p>
-</details>
-
-<details>
   <summary>YTUHD</summary>
   <p><p>YTUHD is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that unlocks 1440p (2K) and 2160p (4K) resolutions in the iOS YouTube app.</p>
   <p><strong>YTUHD preferences</strong> are available in the <strong>Video quality preferences</strong> section under <strong>YouTube settings</strong>.</p>
@@ -335,9 +310,30 @@
  <p>Source code and additional information are available <a href="https://github.com/bhackel/YouLoop">in bhackel's repository</a>.</p></p>
 </details>
 
+<details>
+  <summary>YouMute</summary>
+  <p><p>YouMute is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
+  <p><strong>YouMute can be enabled</strong> in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
+  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouMute">in PoomSmart's GitHub repository</a>.</p></p>
+</details>
 
+<details>
+  <summary><strong>YTLocalQueue*</strong></summary>
+  <p><p>YTLocalQueue is a tweak forked by <a href="https://github.com/oceandrift7">oceandrift7</a>. A YouTube tweak for creating + managing a video queue LOCALLY.</p>
+  <p><strong>YTLocalQueue preferences</strong> can be found in the <strong>YouTube settings</strong>.</p>
+    <p><blockquote>
+        <p><strong>NOTE:</strong>
+           YTLocalQueue is quite buggy and can cause other tweaks or the app to crash. Use with caution!</p>
+    </blockquote></p>
+  <p>Find the latest updated dylib/deb files here: https://github.com/oceandrift7/YTLocalQueue</p></p>
+</details>
 
-
+<details>
+  <summary>YouTimeStamp</summary>
+  <p><p>YouTimeStamp is an iOS YouTube Tweak made for YTVideoOverlay. Forked by <a href="https://github.com/thaibm92">thaibm92</a> Adds a button that lets you copy your timestamp in the Video Player.</p>
+  <p><strong>YouTimeStamp can be enabled</strong> in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
+  <p>Find the latest updated files here: https://github.com/thaibm92/YouTimeStamp</p></p>
+</details>
 
 ## Special thanks
 This project is alive **only** thanks to those guys:
