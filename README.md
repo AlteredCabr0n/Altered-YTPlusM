@@ -182,7 +182,9 @@
 
 <details>
   <summary>YouMe</summary>
-  <p><p>YouPiP is a tweak developed b.</p></p>
+  <p><p>YouMe is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
+  <p><strong>YouMe can be enabled</strong> in the <strong>Video overlay</strong> section under <strong>YouTube settings</strong>.</p>
+  <p>Source code and additional information are available <a href="https://github.com/PoomSmart/YouMe">in PoomSmart's GitHub repository</a>.</p></p>
 </details>
 
 
