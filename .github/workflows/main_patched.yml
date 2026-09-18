@@ -112,7 +112,7 @@ on:
        default: false
 
       enable_ytlocalqueue:
-       description: "Integrate YTLocalQueue"
+       description: "Integrate YTLocalQueue⚠️"
        type: boolean
        required: true
        default: false
