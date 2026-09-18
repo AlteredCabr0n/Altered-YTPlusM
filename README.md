@@ -201,7 +201,7 @@
 </details>
 
 <details>
-  <summary>YTLocalQueue</summary>
+  <summary><strong>YTLocalQueue*</strong></summary>
   <p><p>YTLocalQueue is a tweak forked by <a href="https://github.com/oceandrift7">oceandrift7</a>. A YouTube tweak for creating + managing a video queue LOCALLY.</p>
   <p><strong>YTLocalQueue preferences</strong> can be found in the <strong>YouTube settings</strong>.</p>
   <p>Find the latest updated dylib/deb files here: https://github.com/oceandrift7/YTLocalQueue</p></p>
