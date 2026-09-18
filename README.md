@@ -181,13 +181,6 @@
 ## Tweak Integration Details
 
 <details>
-  <summary></summary>
-  <p><p></p>
-  <p></p>
-  <p></p></p>
-</details>
-
-<details>
   <summary>YouPiP</summary>
   <p><p>YouPiP is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
   <p><strong>YouPiP preferences</strong> are available in the <strong>YouTube settings</strong>.</p>
@@ -212,6 +205,10 @@
   <summary><strong>YTLocalQueue*</strong></summary>
   <p><p>YTLocalQueue is a tweak forked by <a href="https://github.com/oceandrift7">oceandrift7</a>. A YouTube tweak for creating + managing a video queue LOCALLY.</p>
   <p><strong>YTLocalQueue preferences</strong> can be found in the <strong>YouTube settings</strong>.</p>
+    <p><blockquote>
+        <p><strong>NOTE:</strong>
+           YTLocalQueue is quite buggy and can cause other tweaks or the app to crash. Use with caution!</p>
+    </blockquote></p>
   <p>Find the latest updated dylib/deb files here: https://github.com/oceandrift7/YTLocalQueue</p></p>
 </details>
 
