@@ -179,7 +179,13 @@
 </ul>
 
 ## Tweak Integration Details
-<p></p>
+
+<details>
+  <summary>YouMe</summary>
+  <p><p>YouPiP is a tweak developed b.</p></p>
+</details>
+
+
 <details>
   <summary>YouPiP</summary>
   <p><p>YouPiP is a tweak developed by <a href="https://github.com/PoomSmart">PoomSmart</a> that enables the native Picture-in-Picture feature for videos in the iOS YouTube app.</p>
